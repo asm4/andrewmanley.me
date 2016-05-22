@@ -1,8 +1,8 @@
 // Clicking on a link in the nav closes the nav
 $(".navbar-right").on("click", "li", function () {
-  $('.nav-btn.active').removeClass('active');
-  $(this).addClass('active');
-  $('.collapse').collapse('hide');
+  $(".nav-btn.active").removeClass("active");
+  $(this).addClass("active");
+  $(".collapse").collapse("hide");
 });
 
 // Clicking out side of the mobile nav closes the nav
