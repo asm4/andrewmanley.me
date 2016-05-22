@@ -1,4 +1,8 @@
 from django.shortcuts import render
 
+
 def index(request):
-    return render(request, 'core/index.html', { })
+    """
+    Return the main page for website.
+    """
+    return render(request, 'core/index.html', {})
