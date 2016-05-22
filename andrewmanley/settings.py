@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djangobower',
+    'core',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -95,5 +96,5 @@ STATICFILES_FINDERS = (
 BOWER_INSTALLED_APPS = (
     'jquery#2.2.4',
     'bootstrap#3.3.6',
+    'font-awesome#4.6.3',
 )
-
