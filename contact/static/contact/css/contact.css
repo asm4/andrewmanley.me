@@ -1,0 +1,30 @@
+.contact-form {
+  margin-top: 10px;
+}
+
+.valid[required] {
+  border-left: 5px solid #42A948;
+}
+
+.invalid.form-control {
+  border-left: 5px solid #a94442;
+}
+
+.contact-form .btn {
+  margin: 10px auto;
+  display: block;
+}
+
+.well-sm h2 {
+  margin-top: 10px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}

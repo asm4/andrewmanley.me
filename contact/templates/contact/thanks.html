@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% if messages %}
+    <div class="well well-sm text-center">
+      <h2>Thanks!</h2>
+    </div>
+
+    <div class="container">
+      {% for message in messages %}
+        <div{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}
