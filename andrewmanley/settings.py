@@ -26,6 +26,16 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Email Configuration
+EMAIL_RECEIVERS = [
+    'email@gmail.com',
+]
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'changeme'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Application definition
 
@@ -38,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'djangobower',
     'core',
+    'contact',
 )
 
 MIDDLEWARE_CLASSES = (

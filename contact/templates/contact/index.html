@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="well well-sm text-center">
+    <h2>Contact Me</h2>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Contact Form</div>
+      <div class="panel-body">
+        <form role="form" class="contact-form" action="/contact/" method="post">
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+              {{ form.non_field_errors }}
+            </div>
+          {% endif %}
+          <div class="form-group">
+            <label for="{{ form.sender.id_for_label }}">Your Email:</label>
+            {{ form.sender }}
+            {% if form.sender.errors %}
+              {% for error in form.sender.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.subject.id_for_label }}">Subject:</label>
+            {{ form.subject }}
+            {% if form.subject.errors %}
+              {% for error in form.subject.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.message.id_for_label }}">Message:</label>
+            {{ form.message }}
+            {% if form.message.errors %}
+              {% for error in form.message.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="Submit"/>
+        </form>
+      </div>
+    <div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{% static 'contact/js/contact.js' %}"></script>
+{% endblock %}
