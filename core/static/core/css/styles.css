@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#outer-container {
+  min-height: 100%;
+  position: relative;
+}
+
+#main-content {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.footer {
+  background: #1fa67a;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.footer i {
+  font-size: 28px;
+  vertical-align: middle;
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.footer i:hover {
+  color: #dddddd;
+}
+
+.float-right {
+  float: right;
+}

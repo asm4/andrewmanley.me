@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Andrew Manley.me - Software Developer</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+    {% block styles %}
+    {% endblock %}
+    <link rel="icon" href="{% static 'core/img/favicon.png' %}">
+    <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- For Google -->
+    <meta name="description" content="Online resume for Andrew Manley">
+    <meta name="author" content="Andrew Manley">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Andrew Manley",
+        "affiliation": "Pennsylvania College of Techonology",
+        "jobTitle": "Assocate Software Engineer",
+        "url": "http://andrewmanley.me",
+        "sameAs": [
+        	"https://plus.google.com/u/0/114930376949253922149",
+          "https://www.linkedin.com/in/andrew-manley-3b146b8b",
+          "https://github.com/asm4"
+        ]
+      }
+    </script>
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Andrew Manley's Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="TODO-CREATE-IMAGE">
+    <meta property="og:url" content="http://andrewmanley.me">
+    <meta property="og:description" content="Online resume for Andrew Manley">
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://andrewmanley.me">
+    <meta name="twitter:title" content="Andrew Manley's Website">
+    <meta name="twitter:description" content="Online resume for Andrew Manley">
+    <meta name="twitter:image" content="TODO-CREATE-IMAGE">
+  </head>
+
+  <body>
+    <div id="outer-container">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">AndrewManley.me</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-btn"><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+              <li class="nav-btn"><a href="#projects"><i class="fa fa-code" aria-hidden="true"></i> Projects</a></li>
+              <li class="nav-btn"><a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main id="main-content" class="content container">
+        {% block content %}
+        {% endblock %}
+      </main>
+
+      <footer id="footer" class="footer">
+        <div class="container">
+          Andrew Manley &copy; {% now "Y" %}
+          <div class="float-right">
+              <a href="https://github.com/asm4" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/andrew-manley-3b146b8b" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+              <a href="https://plus.google.com/u/0/114930376949253922149" target="_blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+            </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'core/js/app.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
